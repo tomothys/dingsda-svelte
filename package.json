@@ -4,7 +4,7 @@
     "author": "Thomas Schmieck",
     "description": "A svelte UI-library writtin with typescript.",
     "main": "src/index.ts",
-    "module": "./index.ts",
+    "module": "dist/dingsda-svelte.ts",
     "scripts": {
         "start": "vite",
         "build": "vite build"

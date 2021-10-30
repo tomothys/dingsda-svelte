@@ -2,17 +2,20 @@
 
 import { builtinModules } from "module";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
+import { join } from "path"
 
 const PACKAGE_ROOT = __dirname;
 
 const config = {
     mode: process.env.MODE || "development",
     root: PACKAGE_ROOT,
-    plugins: [svelte({
-        experimental: {
-            useVitePreprocess: true,
-        }
-    })],
+    plugins: [
+        svelte({
+            experimental: {
+                useVitePreprocess: true,
+            },
+        }),
+    ],
     server: {
         host: true,
         cors: true,
@@ -23,11 +26,16 @@ const config = {
     build: {
         sourcemap: true,
         outDir: "dist",
-        assetsDir: '.',
+        assetsDir: ".",
         rollupOptions: {
             external: [...builtinModules],
         },
         emptyOutDir: true,
+        lib: {
+            entry: join(__dirname, "src/lib.ts"),
+            name: "DingsdaSvelte",
+            fileName: () => `dingsda-svelte.js`,
+        },
     },
 };
 
