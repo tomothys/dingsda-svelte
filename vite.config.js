@@ -8,9 +8,14 @@ const PACKAGE_ROOT = __dirname;
 const config = {
     mode: process.env.MODE || "development",
     root: PACKAGE_ROOT,
-    plugins: [svelte()],
+    plugins: [svelte({
+        experimental: {
+            useVitePreprocess: true,
+        }
+    })],
     server: {
-        host: "0.0.0.0",
+        host: true,
+        cors: true,
         fs: {
             strict: true,
         },

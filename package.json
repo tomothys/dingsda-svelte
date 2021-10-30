@@ -10,12 +10,13 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+        "@sveltejs/vite-plugin-svelte": "1.0.0-next.30",
         "eslint": "8.1.0",
         "prettier": "2.4.1",
+        "prettier-plugin-svelte": "2.4.0",
         "sass": "1.43.4",
         "svelte": "3.44.0",
-        "svelte-preprocess": "4.9.8",
+        "svelte-check": "2.2.8",
         "typescript": "4.4.4",
         "vite": "2.6.13"
     }
