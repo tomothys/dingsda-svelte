@@ -3,7 +3,6 @@
 import { builtinModules } from "module";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
 import { join } from "path";
-import rollupTypescriptPlugin from "rollup-plugin-typescript2";
 
 const PACKAGE_ROOT = __dirname;
 
@@ -16,7 +15,6 @@ const config = {
                 useVitePreprocess: true,
             },
         }),
-        rollupTypescriptPlugin(),
     ],
     server: {
         host: true,

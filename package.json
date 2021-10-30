@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "author": "Thomas Schmieck",
     "description": "A svelte UI-library writtin with typescript.",
-    "main": "./index.ts",
+    "main": "./src/lib.ts",
     "scripts": {
         "start": "vite",
         "build": "vite build"
@@ -13,7 +13,6 @@
         "eslint": "8.1.0",
         "prettier": "2.4.1",
         "prettier-plugin-svelte": "2.4.0",
-        "rollup-plugin-typescript2": "^0.30.0",
         "sass": "1.43.4",
         "svelte": "3.44.0",
         "svelte-check": "2.2.8",
