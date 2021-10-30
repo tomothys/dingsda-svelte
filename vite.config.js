@@ -36,6 +36,7 @@ const config = {
             name: "DingsdaSvelte",
             fileName: () => `dingsda-svelte.js`,
         },
+        minify: false,
     },
 };
 
