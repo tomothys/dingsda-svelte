@@ -2,7 +2,8 @@
 
 import { builtinModules } from "module";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import { join } from "path"
+import { join } from "path";
+import rollupTypescriptPlugin from "rollup-plugin-typescript2";
 
 const PACKAGE_ROOT = __dirname;
 
@@ -15,6 +16,7 @@ const config = {
                 useVitePreprocess: true,
             },
         }),
+        rollupTypescriptPlugin(),
     ],
     server: {
         host: true,
@@ -34,7 +36,8 @@ const config = {
         lib: {
             entry: join(__dirname, "src/lib.ts"),
             name: "DingsdaSvelte",
-            fileName: () => `dingsda-svelte.js`,
+            fileName: (format) => `dingsda-svelte.${format}.js`,
+            formats: ["es", "umd", "cjs"],
         },
         minify: false,
     },
