@@ -1,6 +1,7 @@
 <script lang="ts">
     import Button from "./components/Button.svelte";
-import Card from "./components/Card.svelte";
+    import Card from "./components/Card.svelte";
+    import Toggle from "./components/Toggle.svelte";
     import Wrapper from "./components/Wrapper.svelte";
 </script>
 
@@ -58,20 +59,30 @@ import Card from "./components/Card.svelte";
         </div>
 
         <div style="margin-bottom: 1.5em;">
-            <h2>Cards</h2>
+            <h2>Cards and toggles</h2>
 
-            <div style="display: flex; gap: 1em;">
-                <Card>
-                    <p>Hi. This is an Card.</p>
-                    <p>Just anothoer paragraph.</p>
-                    <Button id="card-button-1" size="s">Card btn</Button>
-                </Card>
+            <div style="margin-bottom: 1.5em; display: flex; gap: 1.5em;">
+                <div style="display: flex; gap: 1em; align-items: center">
+                    <Toggle id="example-card-toggle-1" checked />
 
-                <Card>
-                    <p>Hi. This is another Card.</p>
-                    <p>Just anothoer paragraph.</p>
-                    <Button id="card-button-2" size="s">Card btn</Button>
-                </Card>
+                    <Card>
+                        <p>Hi. This is an Card.</p>
+
+                        <p>Just anothoer paragraph.</p>
+
+                        <Button id="card-button-1" size="s">Card btn</Button>
+                    </Card>
+                </div>
+
+                <div style="display: flex; gap: 1em; align-items: center">
+                    <Toggle id="example-card-toggle-2" />
+
+                    <Card>
+                        <p>Hi. This is another Card.</p>
+                        <p>Just anothoer paragraph.</p>
+                        <Button id="card-button-2" size="s">Card btn</Button>
+                    </Card>
+                </div>
             </div>
         </div>
     </Wrapper>
@@ -93,7 +104,6 @@ import Card from "./components/Card.svelte";
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
         }
 
         #app {
