@@ -55,30 +55,33 @@
 
         <div style="margin-bottom: 1.5em;">
             <h2>Size s buttons</h2>
-            <Button id="example-button-primary-small" size="s">Primary</Button>
-            <Button
-                id="example-button-primary-small-disabled"
-                size="s"
-                disabled
-            >
-                Disabled
-            </Button>
 
-            <Button
-                id="example-button-secondary-small"
-                size="s"
-                style="secondary"
-            >
-                Secondary
-            </Button>
-            <Button
-                id="example-button-secondary-small-disabled"
-                size="s"
-                style="secondary"
-                disabled
-            >
-                Disabled
-            </Button>
+            <div style="display: flex; gap: 1em;">
+                <Button id="example-button-primary-small" size="s">Primary</Button>
+                <Button
+                    id="example-button-primary-small-disabled"
+                    size="s"
+                    disabled
+                >
+                    Disabled
+                </Button>
+
+                <Button
+                    id="example-button-secondary-small"
+                    size="s"
+                    style="secondary"
+                >
+                    Secondary
+                </Button>
+                <Button
+                    id="example-button-secondary-small-disabled"
+                    size="s"
+                    style="secondary"
+                    disabled
+                >
+                    Disabled
+                </Button>
+            </div>
         </div>
 
         <div style="margin-bottom: 1.5em;">
@@ -112,14 +115,25 @@
         <div style="margin-bottom: 1.5em;">
             <h2>Select</h2>
 
-            <Select id="example-select" items={exampleSelectItems} />
-            <Select id="example-select" disabled items={exampleSelectItems} />
+            <div style="margin-bottom: 1em;">
+                <Select id="example-select" items={exampleSelectItems} />
+            </div>
+
+            <div>
+                <Select id="example-select" disabled items={exampleSelectItems} />
+            </div>
         </div>
 
         <div style="margin-bottom: 1.5em;">
             <h2>Input</h2>
 
-            <Input id="example-input" />
+            <div style="margin-bottom: 1em;">
+                <Input id="example-input" />
+            </div>
+
+            <div>
+                <Input id="example-input" disabled />
+            </div>
         </div>
     </Wrapper>
 </div>

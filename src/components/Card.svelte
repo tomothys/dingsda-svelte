@@ -13,7 +13,6 @@
         border: 1px solid transparent;
         background-color: colors.$elevation-2;
         padding: 20px;
-        display: inline-block;
         font-size: 14px;
 
         &:hover {

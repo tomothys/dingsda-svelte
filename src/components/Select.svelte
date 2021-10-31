@@ -49,7 +49,7 @@
     @use "../scss/functions";
 
     .select-component {
-        display: inline-flex;
+        display: flex;
         position: relative;
 
         select {
