@@ -3,6 +3,23 @@
     import Card from "./components/Card.svelte";
     import Toggle from "./components/Toggle.svelte";
     import Wrapper from "./components/Wrapper.svelte";
+    import Select from "./components/Select.svelte";
+    import type { SelectItem } from "./components/Select.svelte";
+
+    let exampleSelectItems: SelectItem[] = [
+        {
+            value: "value-1",
+            label: "Value 1",
+        },
+        {
+            value: "value-2",
+            label: "Value 2",
+        },
+        {
+            value: "value-3",
+            label: "Value 3",
+        },
+    ];
 </script>
 
 <div class="app-view">
@@ -85,6 +102,12 @@
                 </div>
             </div>
         </div>
+
+        <div style="margin-bottom: 1.5em;">
+            <h2>Select</h2>
+
+            <Select id="example-select" items={exampleSelectItems} />
+        </div>
     </Wrapper>
 </div>
 
@@ -93,10 +116,11 @@
 
     :global {
         html {
-            font-size: 1px;
-            font-family: Arial, Helvetica, sans-serif;
+            background-color: colors.$black;
             width: 100%;
             height: 100%;
+            font-size: 1px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
@@ -108,7 +132,6 @@
 
         #app {
             width: 100%;
-            height: 100%;
         }
 
         h1,
@@ -124,7 +147,6 @@
     }
 
     .app-view {
-        background-color: colors.$black;
         color: colors.$white;
         width: 100%;
         height: 100%;

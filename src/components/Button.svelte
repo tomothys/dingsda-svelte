@@ -30,7 +30,7 @@
         }
 
         &:disabled {
-            opacity: .4;
+            opacity: 0.4;
             pointer-events: none;
         }
 
