@@ -11,17 +11,52 @@
     <Wrapper>
         <p>Hello. I'm the app-view! :)</p>
 
-        <Button id="example-button-primary">Primary</Button>
-        <Button id="example-button-primary-disabled" disabled>Disabled</Button>
+        <div style="margin-bottom: 12px;">
+            <h2>Size m buttons</h2>
+            <Button id="example-button-primary">Primary</Button>
+            <Button id="example-button-primary-disabled" disabled>
+                Disabled
+            </Button>
 
-        <Button id="example-button-secondary" style="secondary">Secondary</Button>
-        <Button id="example-button-secondary-disabled" style="secondary" disabled>Disabled</Button>
+            <Button id="example-button-secondary" style="secondary">
+                Secondary
+            </Button>
+            <Button
+                id="example-button-secondary-disabled"
+                style="secondary"
+                disabled
+            >
+                Disabled
+            </Button>
+        </div>
 
-        <Button id="example-button-primary-small" size="s">Primary</Button>
-        <Button id="example-button-primary-small-disabled" size="s" disabled>Disabled</Button>
+        <div>
+            <h2>Size s buttons</h2>
+            <Button id="example-button-primary-small" size="s">Primary</Button>
+            <Button
+                id="example-button-primary-small-disabled"
+                size="s"
+                disabled
+            >
+                Disabled
+            </Button>
 
-        <Button id="example-button-secondary-small" size="s" style="secondary">Secondary</Button>
-        <Button id="example-button-secondary-small-disabled" size="s" style="secondary" disabled>Disabled</Button>
+            <Button
+                id="example-button-secondary-small"
+                size="s"
+                style="secondary"
+            >
+                Secondary
+            </Button>
+            <Button
+                id="example-button-secondary-small-disabled"
+                size="s"
+                style="secondary"
+                disabled
+            >
+                Disabled
+            </Button>
+        </div>
     </Wrapper>
 </div>
 
@@ -49,7 +84,10 @@
             height: 100%;
         }
 
-        h1, h2, h3, p {
+        h1,
+        h2,
+        h3,
+        p {
             margin-top: 0;
         }
     }
