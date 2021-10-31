@@ -6,3 +6,7 @@ import Card__SvelteComponent from "./components/Card.svelte";
 export const Card = Card__SvelteComponent;
 import Toggle__SvelteComponent from "./components/Toggle.svelte";
 export const Toggle = Toggle__SvelteComponent;
+import Input__SvelteComponent from "./components/Input.svelte";
+export const Input = Input__SvelteComponent;
+import Select__SvelteComponent from "./components/Select.svelte";
+export const Select = Select__SvelteComponent;
