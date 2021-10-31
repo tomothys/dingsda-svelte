@@ -4,7 +4,7 @@
     import Toggle from "./components/Toggle.svelte";
     import Wrapper from "./components/Wrapper.svelte";
     import Select from "./components/Select.svelte";
-    import type { SelectItem } from "./components/Select.svelte";
+    import type { SelectItem } from "./components/Select.interface";
     import Input from "./components/Input.svelte";
 
     let exampleSelectItems: SelectItem[] = [
@@ -31,21 +31,26 @@
     <Wrapper>
         <div style="margin-bottom: 1.5em;">
             <h2>Size m buttons</h2>
-            <Button id="example-button-primary">Primary</Button>
-            <Button id="example-button-primary-disabled" disabled>
-                Disabled
-            </Button>
 
-            <Button id="example-button-secondary" style="secondary">
-                Secondary
-            </Button>
-            <Button
-                id="example-button-secondary-disabled"
-                style="secondary"
-                disabled
-            >
-                Disabled
-            </Button>
+            <div style="display: flex; gap: 1em;">
+                <Button id="example-button-primary">Primary</Button>
+                <Button id="example-button-primary-disabled" disabled>
+                    Disabled
+                </Button>
+
+                <Button id="example-button-secondary" style="secondary">
+                    Secondary
+                </Button>
+                <Button
+                    id="example-button-secondary-disabled"
+                    style="secondary"
+                    disabled
+                >
+                    Disabled
+                </Button>
+
+                <Button id="example-upload-button" type="file-upload">Upload</Button>
+            </div>
         </div>
 
         <div style="margin-bottom: 1.5em;">
