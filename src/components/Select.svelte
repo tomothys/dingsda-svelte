@@ -1,12 +1,6 @@
-<script lang="ts" context="module">
-    export interface SelectItem {
-        value: string;
-        label: string;
-    }
-</script>
-
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
+    import type { SelectItem } from "./Select.interface";
 
     export let id: string;
     export let value: string = "";

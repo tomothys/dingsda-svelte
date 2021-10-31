@@ -10,3 +10,4 @@ import Input__SvelteComponent from "./components/Input.svelte";
 export const Input = Input__SvelteComponent;
 import Select__SvelteComponent from "./components/Select.svelte";
 export const Select = Select__SvelteComponent;
+export * from "./components/Select.interface";
