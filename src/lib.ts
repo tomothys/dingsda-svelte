@@ -4,3 +4,5 @@ import Wrapper__SvelteComponent from "./components/Wrapper.svelte";
 export const Wrapper = Wrapper__SvelteComponent;
 import Card__SvelteComponent from "./components/Card.svelte";
 export const Card = Card__SvelteComponent;
+import Toggle__SvelteComponent from "./components/Toggle.svelte";
+export const Toggle = Toggle__SvelteComponent;
