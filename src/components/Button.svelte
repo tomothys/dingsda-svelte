@@ -59,9 +59,9 @@
         display: inline-flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         font-size: 14px;
         font-weight: bold;
-        color: colors.$black;
 
         .filename {
             font-size: 9px;
@@ -82,6 +82,7 @@
 
         &.primary {
             background-color: colors.$yellow;
+            color: colors.$black;
 
             &:hover {
                 background-color: colors.$yellow-70;
