@@ -4,21 +4,18 @@
     export let id: string;
     export let checked: boolean = false;
 
-    let checkState = checked;
-
     const dispatch = createEventDispatcher<{
         click: { checked: boolean };
     }>();
 
     function handleClick() {
-        checkState = !checkState;
-        dispatch("click", { checked: checkState });
+        dispatch("click", { checked: !checked });
     }
 </script>
 
 <div
     class="toggle-component"
-    class:checked={checkState}
+    class:checked
     {id}
     on:click={handleClick}
     on:mouseenter

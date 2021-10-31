@@ -1,6 +1,3 @@
-<script lang="ts" context="module">
-</script>
-
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
 
@@ -15,14 +12,12 @@
         input: { value: string };
     }>();
 
-    let currentValue = value;
-
     function handleChange() {
-        dispatch("change", { value: currentValue });
+        dispatch("change", { value });
     }
 
     function handleInput() {
-        dispatch("input", { value: currentValue });
+        dispatch("input", { value });
     }
 
     function typeAction(node: HTMLInputElement) {
@@ -33,7 +28,7 @@
 <input
     class="input-component"
     use:typeAction
-    bind:value={currentValue}
+    bind:value
     {id}
     {disabled}
     on:change={handleChange}
