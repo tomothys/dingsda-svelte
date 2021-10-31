@@ -22,13 +22,21 @@
 </script>
 
 {#if ["submit", "button"].includes(type)}
-    <button {id} {type} {disabled} class="button-component {style} size-{size}">
+    <button
+        {id}
+        {type}
+        {disabled}
+        class="button-component {style} size-{size}"
+        on:click
+        on:mouseenter
+        on:mouseleave
+    >
         <slot />
     </button>
 {:else if type === "file-upload"}
     <input type="file" hidden {id} on:change={handleFileUpload} />
 
-    <label class="button-component file-upload size-{size} {style}" for={id}>
+    <label class="button-component file-upload size-{size} {style}" for={id} on:mouseenter on:mouseleave>
         <slot />
 
         {#if filename}

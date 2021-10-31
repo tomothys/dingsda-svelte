@@ -7,7 +7,7 @@
     let checkState = checked;
 
     const dispatch = createEventDispatcher<{
-        click: { checked: boolean }
+        click: { checked: boolean };
     }>();
 
     function handleClick() {
@@ -16,8 +16,15 @@
     }
 </script>
 
-<div class="toggle-component" class:checked={checkState} {id} on:click={handleClick}>
-    <div class="nubsi"></div>
+<div
+    class="toggle-component"
+    class:checked={checkState}
+    {id}
+    on:click={handleClick}
+    on:mouseenter
+    on:mouseleave
+>
+    <div class="nubsi" />
 </div>
 
 <style lang="scss">
