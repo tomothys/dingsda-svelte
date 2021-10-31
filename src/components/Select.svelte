@@ -55,7 +55,7 @@
     @use "../scss/functions";
 
     .select-component {
-        display: flex;
+        display: inline-flex;
         position: relative;
 
         select {
