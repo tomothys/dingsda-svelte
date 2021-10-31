@@ -2,19 +2,22 @@
     export let id: string;
     export let type: "button" | "submit" | "file" = "button";
     export let style: "primary" | "secondary" = "primary";
+    export let size: "m" | "s" = "m";
+    export let disabled: boolean = false;
 </script>
 
-<button {id} {type} class="button-component {style}">
+<button {id} {type} {disabled} class="button-component {style} size-{size}">
     <slot />
 </button>
 
 <style lang="scss">
     @use "../scss/colors";
+    @use "../scss/vars";
 
     .button-component {
         box-sizing: border-box;
         border: 2px solid transparent;
-        border-radius: 2px;
+        border-radius: vars.$border-radius;
         padding: 12px;
         margin: 0;
         display: inline-flex;
@@ -24,6 +27,11 @@
 
         &:hover {
             cursor: pointer;
+        }
+
+        &:disabled {
+            opacity: .4;
+            pointer-events: none;
         }
 
         &.primary {
@@ -41,6 +49,11 @@
             &:hover {
                 background-color: colors.$white-30;
             }
+        }
+
+        &.size-s {
+            padding: 2px 4px;
+            font-size: 12px;
         }
     }
 </style>

@@ -12,7 +12,16 @@
         <p>Hello. I'm the app-view! :)</p>
 
         <Button id="example-button-primary">Primary</Button>
+        <Button id="example-button-primary-disabled" disabled>Disabled</Button>
+
         <Button id="example-button-secondary" style="secondary">Secondary</Button>
+        <Button id="example-button-secondary-disabled" style="secondary" disabled>Disabled</Button>
+
+        <Button id="example-button-primary-small" size="s">Primary</Button>
+        <Button id="example-button-primary-small-disabled" size="s" disabled>Disabled</Button>
+
+        <Button id="example-button-secondary-small" size="s" style="secondary">Secondary</Button>
+        <Button id="example-button-secondary-small-disabled" size="s" style="secondary" disabled>Disabled</Button>
     </Wrapper>
 </div>
 
