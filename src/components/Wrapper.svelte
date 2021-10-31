@@ -22,7 +22,7 @@
         }
 
         &.type-header {
-            background-color: colors.$black-95;
+            background-color: colors.$elevation-1;
         }
     }
 </style>

@@ -1,16 +1,13 @@
 $black: #121212;
-$black-95: mix($black, #fff, 95%);
-$black-90: mix($black, #fff, 90%);
-$black-80: mix($black, #fff, 80%);
 
 $white: #fff;
-$white-30: mix($white, #000, 30%);
-$white-20: mix($white, #000, 20%);
+$white-30: mix($white, $black, 30%);
+$white-20: mix($white, $black, 20%);
 
 $orange: #f7aa62;
 
 $yellow: #f8be4d;
-$yellow-70: mix($yellow, #fff, 70%);
+$yellow-70: mix($yellow, $white, 70%);
 
 $red: #f27f7d;
 
@@ -18,3 +15,11 @@ $teal: #70c1b3;
 
 $blue: #247ba0;
 
+$elevation-1: mix($black, $white, 95%);
+$elevation-2: mix($black, $white, 92%);
+$elevation-3: mix($black, $white, 89%);
+$elevation-4: mix($black, $white, 86%);
+$elevation-5: mix($black, $white, 83%);
+
+$primary: $yellow;
+$secondary: $teal;

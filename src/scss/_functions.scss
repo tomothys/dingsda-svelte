@@ -1,0 +1,3 @@
+@function getHoverColor($color) {
+    @return mix($color, #121212, 17%);
+}

@@ -1,5 +1,6 @@
 <script lang="ts">
     import Button from "./components/Button.svelte";
+import Card from "./components/Card.svelte";
     import Wrapper from "./components/Wrapper.svelte";
 </script>
 
@@ -9,9 +10,7 @@
     </Wrapper>
 
     <Wrapper>
-        <p>Hello. I'm the app-view! :)</p>
-
-        <div style="margin-bottom: 12px;">
+        <div style="margin-bottom: 1.5em;">
             <h2>Size m buttons</h2>
             <Button id="example-button-primary">Primary</Button>
             <Button id="example-button-primary-disabled" disabled>
@@ -30,7 +29,7 @@
             </Button>
         </div>
 
-        <div>
+        <div style="margin-bottom: 1.5em;">
             <h2>Size s buttons</h2>
             <Button id="example-button-primary-small" size="s">Primary</Button>
             <Button
@@ -56,6 +55,24 @@
             >
                 Disabled
             </Button>
+        </div>
+
+        <div style="margin-bottom: 1.5em;">
+            <h2>Cards</h2>
+
+            <div style="display: flex; gap: 1em;">
+                <Card>
+                    <p>Hi. This is an Card.</p>
+                    <p>Just anothoer paragraph.</p>
+                    <Button id="card-button-1" size="s">Card btn</Button>
+                </Card>
+
+                <Card>
+                    <p>Hi. This is another Card.</p>
+                    <p>Just anothoer paragraph.</p>
+                    <Button id="card-button-2" size="s">Card btn</Button>
+                </Card>
+            </div>
         </div>
     </Wrapper>
 </div>
