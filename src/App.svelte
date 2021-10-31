@@ -5,6 +5,7 @@
     import Wrapper from "./components/Wrapper.svelte";
     import Select from "./components/Select.svelte";
     import type { SelectItem } from "./components/Select.svelte";
+    import Input from "./components/Input.svelte";
 
     let exampleSelectItems: SelectItem[] = [
         {
@@ -107,6 +108,13 @@
             <h2>Select</h2>
 
             <Select id="example-select" items={exampleSelectItems} />
+            <Select id="example-select" disabled items={exampleSelectItems} />
+        </div>
+
+        <div style="margin-bottom: 1.5em;">
+            <h2>Input</h2>
+
+            <Input id="example-input" />
         </div>
     </Wrapper>
 </div>
