@@ -44,7 +44,7 @@
     .input-component {
         box-sizing: border-box;
         border-radius: vars.$border-radius;
-        border: none;
+        border: 1px solid transparent;
         background-color: colors.$elevation-2;
         min-height: 40px;
         width: 100%;
@@ -54,8 +54,11 @@
         color: colors.$white;
         display: block;
 
-        &:hover,
         &:focus {
+            border-color: colors.$primary;
+        }
+
+        &:hover {
             background-color: functions.getHoverColor(colors.$primary);
         }
 

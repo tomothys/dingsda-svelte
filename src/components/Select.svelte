@@ -77,6 +77,7 @@
             box-sizing: border-box;
             border-radius: vars.$border-radius;
             background-color: colors.$elevation-2;
+            border: 1px solid transparent;
             height: 100%;
             min-height: 40px;
             width: 100%;
@@ -97,6 +98,10 @@
 
         select:hover + .custom-select-style {
             background-color: functions.getHoverColor(colors.$primary);
+        }
+
+        select:focus + .custom-select-style {
+            border-color: colors.$primary;
         }
 
         select:disabled + .custom-select-style {
